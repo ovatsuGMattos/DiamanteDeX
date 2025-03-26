@@ -4,73 +4,70 @@
     {
         static void Main(string[] args)
         {
+            ExibirBoasVindas();
+
+            int numeroDigitado = SolicitarNumeroImpar();
+
+            if (numeroDigitado % 2 == 0)
+            {
+                Console.WriteLine("Número inválido. Certifique-se de imputar um número ímpar.");
+                return;
+            }
+
+            ExibirDiamante(numeroDigitado);
+
+            Console.ReadLine();
+        }
+
+        static void ExibirBoasVindas()
+        {
             Console.WriteLine("-------------------------------");
             Console.WriteLine("Seja bem vindo ao Diamante de X");
             Console.WriteLine("-------------------------------");
-
-            //O programa deve solicitar ao usuário um número inteiro.
-            Console.WriteLine("Digite o número ÍMPAR desejado");
-            int numeroDigitado = Convert.ToInt32(Console.ReadLine());
-            int espaco = numeroDigitado;
-            int contador = 1;
-
-            //O número deve ser ímpar. Caso contrário, o programa deve informar que a entrada é inválida e solicitar um novo número.
-            if (numeroDigitado % 2 > 0)
-            {
-
-                while (contador < numeroDigitado)
-                {
-                    //O número de linhas e colunas deve ser igual ao número ímpar fornecido.
-                    //Lógica de espaçamento antes dos X's
-                    for (int i = 0; i < ((numeroDigitado - contador) / 2); i++)
-                    {
-                        Console.Write(" ");
-                    }
-                    for (int i = 1; i <= contador; i++)
-                    {
-                        Console.Write("x");
-                    }
-
-                    contador = contador + 2;
-                    Console.WriteLine("");
-                }
-
-                //A linha central do diamante deve conter o número máximo de 'X's.
-                //Lógica central do diamante.
-                for (int i = 0; i < numeroDigitado; i++)
-                {
-                    Console.Write("x");
-                }
-
-                Console.WriteLine();
-
-                // lógica da parte inferior.
-                contador = contador - 2;
-
-                while (contador > 0)
-                {
-                    for (int i = 0; i < ((numeroDigitado - contador) / 2); i++)
-                    {
-                        Console.Write(" ");
-                    }
-                    for (int i = 1; i <= contador; i++)
-                    {
-                        Console.Write("x");
-                    }
-                    contador = contador - 2;
-
-                    Console.WriteLine("");
-                }
-
-            }
-            else
-            {
-                Console.WriteLine("Número inválido, certifique de imputar um número ÍMPAR");
-            }
-
-            Console.ReadLine();
-
         }
 
+        static int SolicitarNumeroImpar()
+        {
+            Console.WriteLine("Digite o número ÍMPAR desejado");
+            int numero = Convert.ToInt32(Console.ReadLine());
+            return numero;
+        }
+
+        static void ExibirDiamante(int numero)
+        {
+            int contador = 1;
+
+            while (contador < numero)
+            {
+                ExibirLinhaDiamante(numero, contador);
+                contador += 2;
+            }
+
+            ExibirLinhaDiamante(numero, numero);
+
+            contador -= 2;
+            while (contador > 0)
+            {
+                ExibirLinhaDiamante(numero, contador);
+                contador -= 2;
+            }
+        }
+
+        static void ExibirLinhaDiamante(int numero, int contador)
+        {
+            int espacos = (numero - contador) / 2;
+
+            for (int i = 0; i < espacos; i++)
+            {
+                Console.Write(" ");
+            }
+
+            for (int i = 1; i <= contador; i++)
+            {
+                Console.Write("x");
+            }
+
+            Console.WriteLine();
+        }
     }
 }
