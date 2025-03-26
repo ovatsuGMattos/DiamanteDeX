@@ -4,8 +4,11 @@
     {
         static void Main(string[] args)
         {
-            //O programa deve solicitar ao usuário um número inteiro.
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine("Seja bem vindo ao Diamante de X");
+            Console.WriteLine("-------------------------------");
 
+            //O programa deve solicitar ao usuário um número inteiro.
             Console.WriteLine("Digite o número ÍMPAR desejado");
             int numeroDigitado = Convert.ToInt32(Console.ReadLine());
             int espaco = numeroDigitado;
