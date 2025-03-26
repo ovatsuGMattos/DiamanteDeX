@@ -1,18 +1,18 @@
-# ?? Diamante de X
+ï»¿# ðŸ’Ž Diamante de X
 ````
 		PROGRAMA DESENVOLVIDO DURANTE ACADEMIA DO PROGRAMADOR 2025.
 ````
-![]()
+![](https://i.imgur.com/6ArEz3p.gif)
 
-## Descrição
+## DescriÃ§Ã£o
 
-Este é um projeto simples que desenha um diamante com o caractere 'x' no console, baseado em um número ímpar fornecido pelo usuário.
+Este Ã© um projeto simples que desenha um diamante com o caractere 'x' no console, baseado em um nÃºmero Ã­mpar fornecido pelo usuÃ¡rio.
 
-O programa solicita um número inteiro ímpar e constrói o diamante. Caso o número seja par, o usuário é avisado e o programa não prossegue.
+O programa solicita um nÃºmero inteiro Ã­mpar e constrÃ³i o diamante. Caso o nÃºmero seja par, o usuÃ¡rio Ã© avisado e o programa nÃ£o prossegue.
 
 ## Como Executar
 
-1. Clone o repositório:
+1. Clone o repositÃ³rio:
 ````
 git clone https://github.com/ovatsuGMattos/DiamanteDeX
 ````
@@ -26,7 +26,7 @@ dotnet run
 ````
 ## Requisitos
 ````
-.NET SDK instalado (versão 6 ou superior recomendada)
+.NET SDK instalado (versÃ£o 6 ou superior recomendada)
 ````
 
 
