@@ -17,6 +17,7 @@
 
                 while (contador < numeroDigitado)
                 {
+                    //O número de linhas e colunas deve ser igual ao número ímpar fornecido.
                     //Lógica de espaçamento antes dos X's
                     for (int i = 0; i < ((numeroDigitado - contador) / 2); i++)
                     {
@@ -31,6 +32,7 @@
                     Console.WriteLine("");
                 }
 
+                //A linha central do diamante deve conter o número máximo de 'X's.
                 //Lógica central do diamante.
                 for (int i = 0; i < numeroDigitado; i++)
                 {
@@ -62,8 +64,6 @@
             {
                 Console.WriteLine("Número inválido, certifique de imputar um número ÍMPAR");
             }
-            //O número de linhas e colunas deve ser igual ao número ímpar fornecido.
-            //A linha central do diamante deve conter o número máximo de 'X's.
 
             Console.ReadLine();
 
