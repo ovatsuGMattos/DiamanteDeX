@@ -18,7 +18,7 @@ git clone https://github.com/ovatsuGMattos/DiamanteDeX
 ````
 2.Acesse a pasta do projeto
 ````
-cd diamanteDeX
+cd DiamanteDeX
 ````
 3. Execute o programa
 ````
