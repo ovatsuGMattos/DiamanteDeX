@@ -10,20 +10,18 @@
             int numeroDigitado = Convert.ToInt32(Console.ReadLine());
             int espaco = numeroDigitado;
             int contador = 1;
+
             //O número deve ser ímpar. Caso contrário, o programa deve informar que a entrada é inválida e solicitar um novo número.
             if (numeroDigitado % 2 > 0)
             {
 
-                while (true)
+                while (contador < numeroDigitado)
                 {
-                    for (int i = 0; i < (espaco / 2); i++)
+                    //Lógica de espaçamento antes dos X's
+                    for (int i = 0; i < ((numeroDigitado - contador)/ 2); i++)
                     {
                         Console.Write(" ");
                     }
-                        break;
-                }
-                while (contador < numeroDigitado)
-                {
                     for (int i = 1; i <= contador; i++)
                     {
                         Console.Write("x");
@@ -40,10 +38,6 @@
             }
             //O número de linhas e colunas deve ser igual ao número ímpar fornecido.
             //A linha central do diamante deve conter o número máximo de 'X's.
-
-
-            Console.WriteLine("");
-
 
             Console.ReadLine();
 
