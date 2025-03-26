@@ -18,7 +18,7 @@
                 while (contador < numeroDigitado)
                 {
                     //Lógica de espaçamento antes dos X's
-                    for (int i = 0; i < ((numeroDigitado - contador)/ 2); i++)
+                    for (int i = 0; i < ((numeroDigitado - contador) / 2); i++)
                     {
                         Console.Write(" ");
                     }
@@ -37,12 +37,30 @@
                     Console.Write("x");
                 }
 
-                Console.WriteLine("");
+                Console.WriteLine();
+
+                // lógica da parte inferior.
+                contador = contador - 2;
+
+                while (contador > 0)
+                {
+                    for (int i = 0; i < ((numeroDigitado - contador) / 2); i++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for (int i = 1; i <= contador; i++)
+                    {
+                        Console.Write("x");
+                    }
+                    contador = contador - 2;
+
+                    Console.WriteLine("");
+                }
+
             }
             else
             {
                 Console.WriteLine("Número inválido, certifique de imputar um número ÍMPAR");
-
             }
             //O número de linhas e colunas deve ser igual ao número ímpar fornecido.
             //A linha central do diamante deve conter o número máximo de 'X's.
