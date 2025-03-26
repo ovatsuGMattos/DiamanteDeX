@@ -30,6 +30,14 @@
                     contador = contador + 2;
                     Console.WriteLine("");
                 }
+
+                //Lógica central do diamante.
+                for (int i = 0; i < numeroDigitado; i++)
+                {
+                    Console.Write("x");
+                }
+
+                Console.WriteLine("");
             }
             else
             {
